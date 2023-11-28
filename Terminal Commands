@@ -1,0 +1,8 @@
+docker run -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts-jdk11
+docker ps # Find Dockers Container ID
+docker exec -it -u 0 9f0a88426697 /bin/bash # Connect as root (user 0) to an interactive terminal
+
+apt-get update
+apt-get install python3
+apt-get install python3-pip
+pip install pytest --break-system-packages
